@@ -51,6 +51,24 @@ set laststatus=2
 set noequalalways
 
 " NERDTree configuration
+
+
+
+" =========== Splits
+" Simpler split navigation
+map <C-D-A-Left> <C-w>h<C-w>
+map <C-D-A-Up> <C-w>j<C-w>
+map <C-D-A-Down> <C-w>k<C-w>
+map <C-D-A-Right> <C-w>l<C-w>
+
+" Vsplits/Splits size increase/decrease
+map <kPlus> <C-w>+
+map <kMinus> <C-w>-
+map <kDivide> <C-w><
+map <kMultiply> <C-w>>
+" Adjust splits to the same size
+map <Leader>= <C-w>=
+imap <Leader>= <Esc> <C-w>=
 let NERDTreeIgnore=['\.rbc$', '\~$']
 map <Leader>n :NERDTreeToggle<CR>
 " navigates nerdtree to the current file
