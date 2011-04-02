@@ -51,6 +51,9 @@ set laststatus=2
 set noequalalways
 
 " NERDTree configuration
+" ZoomWin configuration
+map <Leader><Leader> :ZoomWin<CR>
+
 
 
 
@@ -78,8 +81,7 @@ map <Leader><S-s> :NERDTree %:p:h<CR>
 " Command-T configuration
 let g:CommandTMaxHeight=20
 
-" ZoomWin configuration
-map <Leader><Leader> :ZoomWin<CR>
+
 
 " CTags
 map <Leader>rt :!ctags --extra=+f -R *<CR><CR>
