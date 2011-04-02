@@ -39,6 +39,9 @@ if has("gui_macvim")
   map  <D-9> 9gt
   imap <D-9> <Esc>9gt
 
+  " Cycle through tabs with <CMD><ALT><left/right>
+  nmap <D-A-Right> :tabnext<CR>
+  nmap <D-A-Left> :tabprevious<CR>
 endif
 
 " Start without the toolbar
