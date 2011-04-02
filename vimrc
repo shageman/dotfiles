@@ -81,9 +81,6 @@ map <Leader>n :NERDTreeToggle<CR>
 map <Leader><S-s> :NERDTree %:p:h<CR>
 " NERDTreeFind
 map <Leader>nf :NERDTreeFind<CR>
-" Always open NerdTree
-autocmd VimEnter * NERDTree
-autocmd BufEnter * NERDTreeMirror
 " Open file in new tab with NerdTree
 let NERDTreeMapOpenInTab="<S-CR>"
 

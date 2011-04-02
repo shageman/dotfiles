@@ -42,6 +42,10 @@ if has("gui_macvim")
   " Cycle through tabs with <CMD><ALT><left/right>
   nmap <D-A-Right> :tabnext<CR>
   nmap <D-A-Left> :tabprevious<CR>
+
+  " Always open NerdTree
+  autocmd VimEnter * NERDTree
+  autocmd BufEnter * NERDTreeMirror
 endif
 
 " Start without the toolbar
