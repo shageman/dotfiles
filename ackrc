@@ -18,4 +18,5 @@
 --ignore-dir=engines/perl_backend/test/stub_data
 --ignore-dir=public/ass-xe
 
-
+--type-add=html=.haml
+--type-add=css=.sass,.scss
