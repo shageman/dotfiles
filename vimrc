@@ -237,6 +237,14 @@ vmap < <gv
 vmap <Tab> >gv
 vmap <S-Tab> <gv
 
+
+
+" Command-/ to toggle comments
+map <D-/> <plug>NERDCommenterToggle<CR>
+" Command-][ to increase/decrease indentation
+vmap <D-]> >gv
+vmap <D-[> <gv
+
 " map control left and control right to swap the buffer
 map <C-A-right> <ESC>:bn<CR>
 map <C-A-left> <ESC>:bp<CR>

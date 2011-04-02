@@ -17,13 +17,6 @@ if has("gui_macvim")
   " Command-e for ConqueTerm
   map <D-e> :call StartTerm()<CR>
 
-  " Command-/ to toggle comments
-  map <D-/> <plug>NERDCommenterToggle<CR>
-
-  " Command-][ to increase/decrease indentation
-  vmap <D-]> >gv
-  vmap <D-[> <gv
-
   " Map Command-# to switch tabs
   map  <D-0> 0gt
   imap <D-0> <Esc>0gt
