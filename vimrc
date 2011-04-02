@@ -50,7 +50,6 @@ set laststatus=2
 " This is likely a bludgeon to solve some other issue, but it works
 set noequalalways
 
-" NERDTree configuration
 " ZoomWin configuration
 map <Leader><Leader> :ZoomWin<CR>
 
@@ -72,11 +71,23 @@ map <kMultiply> <C-w>>
 " Adjust splits to the same size
 map <Leader>= <C-w>=
 imap <Leader>= <Esc> <C-w>=
+
+
+
+" ============ NERDTree configuration
 let NERDTreeIgnore=['\.rbc$', '\~$']
 map <Leader>n :NERDTreeToggle<CR>
 " navigates nerdtree to the current file
-map <Leader><S-s> :NERDTree %:p:h<CR> 
+map <Leader><S-s> :NERDTree %:p:h<CR>
 " NERDTreeFind
+map <Leader>nf :NERDTreeFind<CR>
+" Always open NerdTree
+autocmd VimEnter * NERDTree
+autocmd BufEnter * NERDTreeMirror
+" Open file in new tab with NerdTree
+let NERDTreeMapOpenInTab="<S-CR>"
+
+
 
 " Command-T configuration
 let g:CommandTMaxHeight=20
