@@ -229,13 +229,17 @@ nmap <space> :
 inoremap jj <ESC>
 cnoremap jj <ESC>
 
+
+
+" ========== Indentation
 " indent in visual and insert mode
 vmap > >gv
 vmap < <gv
-
 " indent with tab and shift-tag in visual mode
 vmap <Tab> >gv
 vmap <S-Tab> <gv
+" Indent the whole file while staying at cursor position
+map <Leader>I :call Preserve("normal gg=G")<CR>:call Preserve("%s/\\s\\+$//e")<CR>
 
 
 
@@ -255,11 +259,21 @@ let Tlist_Ctags_Cmd = "/usr/local/bin/ctags"
 " ,w will easily switch window focus
 map <leader>w <C-w>w
 
-" Clean up the trailing spaces
-nmap <leader><S-s> :call Preserve("%s/\\s\\+$//e")<CR>
-
-" <Leader> timeout 
+" <Leader> timeout
 set timeoutlen=500
+
+" a function that preserves the state when commands are called
+function! Preserve(command)
+  " Preparation: save last search, and cursor position.
+  let _s=@/
+  let l = line(".")
+  let c = col(".")
+  " Do the business:
+  execute a:command
+  " Clean up: restore previous search history, and cursor position
+  let @/=_s
+  call cursor(l, c)
+endfunction
 
 " settings for VimClojure
 let g:vimclojure#HighlightBuiltins=1   " Highlight Clojure's builtins
@@ -278,6 +292,7 @@ map <Leader>f :Rfunctionaltest
 
 map <Leader>r :Rake<CR>
 map <Leader>R :.Rake<CR>
+
 
 " Include user's local vim config
 if filereadable(expand("~/.vimrc.local"))
