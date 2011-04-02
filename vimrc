@@ -89,6 +89,9 @@ let NERDTreeMapOpenInTab="<S-CR>"
 
 
 
+" ============ Command-T
+" Open file in new tab with Command-t
+let g:CommandTAcceptSelectionTabMap="<S-CR>"
 " Command-T configuration
 let g:CommandTMaxHeight=20
 
