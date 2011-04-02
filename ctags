@@ -4,3 +4,4 @@
 --exclude=tmp
 --exclude=engines/perl_backend/test/stub_data
 --exclude=public/ass-xe
+--exclude=coverage
