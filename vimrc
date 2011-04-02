@@ -306,6 +306,8 @@ map <Leader>f :Rfunctionaltest
 map <Leader>r :Rake<CR>
 map <Leader>R :.Rake<CR>
 
+imap <Leader>l <Space>=><Space>
+
 
 " Include user's local vim config
 if filereadable(expand("~/.vimrc.local"))
