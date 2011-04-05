@@ -45,7 +45,7 @@ if has("gui_macvim")
 
   " Always open NerdTree
   autocmd VimEnter * NERDTree
-  autocmd BufEnter * :silent NERDTreeMirror
+  autocmd BufEnter * NERDTreeMirror
 endif
 
 " Start without the toolbar

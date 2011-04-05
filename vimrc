@@ -21,13 +21,16 @@ set number
 set ruler
 syntax on
 
+set noerrorbells
+set vb t_vb=
+
 " Set encoding
 set encoding=utf-8
 
 " Whitespace stuff
+set shiftwidth=2
 set nowrap
 set tabstop=2
-set shiftwidth=2
 set softtabstop=2
 set expandtab
 set list listchars=tab:\ \ ,trail:·
