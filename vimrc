@@ -203,9 +203,6 @@ set guicursor+=i-ci:ver25-Cursor
 set guicursor+=r-cr:hor20-Cursor
 set guicursor+=sm:block-Cursor-blinkwait175-blinkoff150-blinkon175
 
-" default color scheme
-color ir_black
-
 " hide toolbar
 set guioptions-=T
 
