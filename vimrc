@@ -101,10 +101,13 @@ let g:CommandTMaxHeight=20
 map <Leader>rt :!ctags --extra=+f -R *<CR><CR>
 map <C-\> :tnext<CR>
 
-" Remember last location in file
 if has("autocmd")
+  " Remember last location in file
   au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
     \| exe "normal g'\"" | endif
+
+  " Delete trailing whitespace on save in ruby and other languages.
+  autocmd BufWritePre *.py,*.rb,*.pl,*.java,*.feature :%s/\s\+$//e
 endif
 
 function s:setupWrapping()
