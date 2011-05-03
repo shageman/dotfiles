@@ -1,5 +1,5 @@
 # changing directory to code project
-function c { cd ~/devel/git/$1; }
+# function c { cd ~/devel/git/$1; }
 
-alias ss="script/server -u"
-alias sc="script/console"
+# alias ss="script/server -u"
+# alias sc="script/console"
