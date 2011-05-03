@@ -1,0 +1,21 @@
+[user]
+  name = Stephan Hagemann
+  email = stephan.hagemann@xing.com
+
+[alias]
+  st = status
+  ci = commit
+  co = checkout
+  br = branch
+
+[color]
+  branch = auto
+  diff = auto
+  interactive = auto
+  status = auto
+
+[merge]
+  tool = opendiff
+
+[core]
+  editor = "vi"
