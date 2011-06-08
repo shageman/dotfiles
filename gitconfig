@@ -18,4 +18,4 @@
   tool = opendiff
 
 [core]
-  editor = "vi"
+  editor = "/usr/local/bin/mvim"
